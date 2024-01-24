@@ -17,7 +17,7 @@ const data = {
 };
 
 const options = {
-    maintainAspectRatio: false, // Permet au graphique de ne pas maintenir son aspect ratio
+    maintainAspectRatio: false,
     responsive: true,
     scales: {
         x: {

@@ -1,4 +1,4 @@
-const SettingsBar = () => {
+const SettingsBar = ({setIsSetting}) => {
     return (
         <div className="flex flex-row-reverse">
             {/* Sidebar */}
@@ -9,7 +9,7 @@ const SettingsBar = () => {
                     <div
                         className="mb-4 flex items-center gap-x-2 px-2 text-slate-800 dark:text-slate-200"
                     >
-                        <button className="inline-flex rounded-lg p-1 hover:bg-slate-700">
+                        <button onClick={()=>{setIsSetting(false)}} className="inline-flex rounded-lg p-1 hover:bg-slate-700">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-6 w-6"
@@ -26,7 +26,7 @@ const SettingsBar = () => {
                                 <path d="M9 4v16"></path>
                                 <path d="M14 10l2 2l-2 2"></path>
                             </svg>
-                            <span className="sr-only">Close settings sidebar</span>
+                            <span  className="sr-only">Close settings sidebar</span>
                         </button>
                         <h2 className="text-lg font-medium">Variable</h2>
                     </div>
