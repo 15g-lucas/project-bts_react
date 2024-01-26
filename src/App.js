@@ -11,26 +11,26 @@ function App() {
     const [isSetting, setIsSetting] = useState(true)
 
     return (
-        <Login />
+        // <Login />
 
 
-        // <div className={'flex justify-between'}>
-        //     <NavBar menu={menu} setMenu={setMenu} setIsSetting={setIsSetting}/>
-        //     <div className={'w-2/4 max-h-screen overflow-auto'}>
-        //         {(() => {
-        //             switch (menu) {
-        //                 case 1 :
-        //                     return <Automaton />
-        //                 case 3:
-        //                     return <LineChart />
-        //             }
-        //         })(menu)}
-        //     </div>
-        //     {isSetting ? (
-        //         <SettingsBar setIsSetting={setIsSetting}/>
-        //     ) : <div></div>}
-        //
-        // </div>
+        <div className={'flex justify-between'}>
+            <NavBar menu={menu} setMenu={setMenu} setIsSetting={setIsSetting}/>
+            <div className={'w-2/4 max-h-screen overflow-auto'}>
+                {(() => {
+                    switch (menu) {
+                        case 1 :
+                            return <Automaton />
+                        case 3:
+                            return <LineChart />
+                    }
+                })(menu)}
+            </div>
+            {isSetting ? (
+                <SettingsBar setIsSetting={setIsSetting}/>
+            ) : <div></div>}
+
+        </div>
 
     );
 }

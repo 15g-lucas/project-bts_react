@@ -22,7 +22,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
                 'name': 'Variables',
                 'search': 'une variable',
                 'activeButton': true,
-                'link': 'api/v1/description/automaton/2',
+                'link': 'api/v1/variable',
                 'typeFetch': false,
             }
             break
@@ -32,7 +32,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
                 'search': 'un graphique',
                 'activeButton': true,
                 'link': 'api/v1/graphic',
-                'typeFetch': false,
+                'typeFetch': true,
             }
             break
         case 4 :
@@ -158,21 +158,23 @@ const MenuLeft = ({menu, setIsSetting}) => {
                                 Créer {data.search}
                             </button>)}
 
-                        {!data.typeFetch ? (// dataFetch.data2.map((item, index) => (
-                            //     <button
-                            //         key={index}
-                            //         className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
-                            //     >
-                            //         <h1
-                            //             className="text-sm font-medium capitalize text-slate-700 dark:text-slate-200"
-                            //         >
-                            //             test
-                            //         </h1>
-                            //         <p className="text-xs text-slate-500 dark:text-slate-400">Description</p>
-                            //     </button>
-                            // ))
-                            console.log(dataFetch)
-                            // <p>{dataFetch.data[0].name}</p>
+                        {!data.typeFetch ? (
+                            dataFetch.data.map((item, index) => (
+                                <button
+                                    key={index}
+                                    className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
+                                >
+                                    <h1
+                                        className="text-sm font-medium capitalize text-slate-700 dark:text-slate-200"
+                                    >
+                                        {item.name}
+                                    </h1>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400">{item.formula}</p>
+                                    {item.regex.map((regexItem, regexIndex) => (
+                                        <p key={regexIndex} className="text-xs text-slate-500 dark:text-slate-400">{regexIndex+1} - {regexItem}</p>
+                                    ))}
+                                </button>
+                            ))
                         ) : (Object.keys(dataFetch.data).map((item, index) => (<button
                                     key={index}
                                     className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
