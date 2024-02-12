@@ -14,7 +14,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
                 'activeButton': false,
                 'key': 'automations',
                 'link': 'api/v1/description/automaton',
-                'typeFetch': true,
+                'typeFetch': false,
             }
             break
         case 2 :

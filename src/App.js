@@ -11,7 +11,7 @@ function App() {
     const [isSetting, setIsSetting] = useState(true)
 
     return (
-        // <Login />
+        //<Login />
 
 
         <div className={'flex justify-between'}>
@@ -24,7 +24,7 @@ function App() {
                         case 3:
                             return <LineChart />
                     }
-                })(menu)}
+                })()}
             </div>
             {isSetting ? (
                 <SettingsBar setIsSetting={setIsSetting}/>
