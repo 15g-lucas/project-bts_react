@@ -1,4 +1,5 @@
 const FetchData = async (endpoint, method = 'GET', data = null) => {
+
     const requestOptions = {
         method,
         headers: {

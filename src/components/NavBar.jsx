@@ -5,7 +5,7 @@ import MenuLeft from "./MenuLeft";
 
 
 
-const NavBar = ({menu, setMenu, setIsSetting}) =>{
+const NavBar = ({menu, setMenu, setIsSetting, setDevice}) =>{
     return (
         <aside className="flex">
             {/* First Column */}
@@ -157,7 +157,7 @@ const NavBar = ({menu, setMenu, setIsSetting}) =>{
                 </a>
             </div>
             {/* Second Column */}
-            <MenuLeft menu={menu} setIsSetting={setIsSetting}/>
+            <MenuLeft menu={menu} setIsSetting={setIsSetting} setDevice={setDevice}/>
         </aside>
     )
 }
