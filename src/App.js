@@ -18,7 +18,7 @@ function App() {
                 {(() => {
                     switch (menu) {
                         case 1 :
-                            return <Automaton device={device}/>
+                            // return <Automaton device={device}/>
                         case 2 :
                             return <Variables />
                         case 3:
