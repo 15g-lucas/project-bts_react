@@ -157,7 +157,7 @@ const MenuLeft = ({menu, setIsSetting, setDevice}) => {
                 </button>)}
 
                 {menu===1 ? (
-                    dataFetch.map((item, index) => (
+                    dataFetch.forEach((item, index) => (
                         <button
                             key={index}
                             className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
@@ -171,7 +171,7 @@ const MenuLeft = ({menu, setIsSetting, setDevice}) => {
                             </h1>
                         </button>
                     ))
-                ) : (dataFetch.map((item) => (
+                ) : (dataFetch.forEach((item) => (
                     <button
                         className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
 
