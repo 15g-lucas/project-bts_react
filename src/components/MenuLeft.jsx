@@ -53,7 +53,10 @@ const MenuLeft = ({menu, setIsSetting}) => {
             setLoading(true)
             const result = await FetchData(data.link);
             await setDataFetch(result);
-            console.log(dataFetch.data)
+            dataFetch.data.forEach((e)=>{
+                console.log(e)
+
+            })
             setLoading(false)
         };
 
