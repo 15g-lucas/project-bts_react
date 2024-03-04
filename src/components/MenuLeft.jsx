@@ -52,8 +52,8 @@ const MenuLeft = ({menu, setIsSetting}) => {
         const fetchDataAndUpdateState = async () => {
             setLoading(true)
             const result = await FetchData(data.link);
-            console.log(result)
             await setDataFetch(result);
+            console.log(dataFetch)
             for (let i = 0; i < result.data.length; i++) {
                 console.log(dataFetch.data[i])
             }
