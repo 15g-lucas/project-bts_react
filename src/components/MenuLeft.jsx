@@ -51,6 +51,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
 
         const fetchDataAndUpdateState = async () => {
             setLoading(true)
+            console.log('strat')
             const result = await FetchData(data.link);
             await setDataFetch(result);
             setLoading(false)
@@ -151,7 +152,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
                             </button>)}
 
                         {!data.typeFetch ? (
-                            dataFetch.data.map((item, index) => (
+                            dataFetch.data.forEach((item, index) => (
                                 <button
                                     key={index}
                                     className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
@@ -167,7 +168,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
                                     ))}
                                 </button>
                             ))
-                        ) : (Object.keys(dataFetch.data).map((item, index) => (<button
+                        ) : (Object.keys(dataFetch.data).forEach((item, index) => (<button
                                     key={index}
                                     className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
                                 >
