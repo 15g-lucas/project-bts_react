@@ -12,8 +12,6 @@ const MenuLeft = ({menu, setIsSetting}) => {
     const [numberData, setNumberData] = useState(0)
     const [loading, setLoading] = useState(true)
 
-
-
     useEffect(() => {
         switch (menu) {
             case 1 :
