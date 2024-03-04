@@ -53,16 +53,18 @@ const MenuLeft = ({menu, setIsSetting}) => {
             setLoading(true)
             const result = await FetchData(data.link);
             await setDataFetch(Object.values(result));
-            console.log(dataFetch)
-            dataFetch.data.forEach((innerArray) => {
-                innerArray.forEach((item) => {
-                    // Accédez aux propriétés de chaque objet ici
-                    console.log("ID:", item.id);
-                    console.log("Name:", item.name);
-                    console.log("Description:", item.description);
-                    console.log("Formula:", item.formula);
-                    console.log("Regex:", item.regex);
-                    console.log("\n");
+            setDataFetch.then(() => {
+                console.log(dataFetch);
+                dataFetch.data.forEach((innerArray) => {
+                    innerArray.forEach((item) => {
+                        // Accédez aux propriétés de chaque objet ici
+                        console.log("ID:", item.id);
+                        console.log("Name:", item.name);
+                        console.log("Description:", item.description);
+                        console.log("Formula:", item.formula);
+                        console.log("Regex:", item.regex);
+                        console.log("\n");
+                    });
                 });
             });
             setLoading(false)
