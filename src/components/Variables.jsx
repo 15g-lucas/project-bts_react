@@ -15,7 +15,6 @@ const Variables = () => {
             formula : document.querySelector('#variable').value
         }
         const result = await FetchData('api/v1/variable','POST', data);
-        console.log(result)
     }
     function selectVariable(event){
         let dataId = event.currentTarget.getAttribute('data-id')
