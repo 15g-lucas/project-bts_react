@@ -51,7 +51,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
 
         const fetchDataAndUpdateState = async () => {
             setLoading(true)
-            console.log('strat')
+            console.log(data.link)
             const result = await FetchData(data.link);
             await setDataFetch(result);
             setLoading(false)
