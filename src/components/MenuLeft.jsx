@@ -60,7 +60,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
         };
 
         fetchDataAndUpdateState();
-    }, [menu, data.link]);
+    }, [menu]);
 
 
     // return loading ? (
