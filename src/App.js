@@ -5,28 +5,33 @@ import NavBar from "./components/NavBar";
 import SettingsBar from "./components/SettingsBar";
 import LineChart from "./components/LineChart";
 import Automaton from "./components/Automaton";
-import Variables from "./components/Variables";
 
 function App() {
     const [menu, setMenu] = useState(1)
-    const [device, setDevice] = useState('Dev18')
+    const [isSetting, setIsSetting] = useState(true)
 
     return (
+        //<Login />
+
+
         <div className={'flex justify-between'}>
-            <NavBar menu={menu} setMenu={setMenu} setDevice={setDevice}/>
-            <div className={'w-2/4 max-h-screen overflow-auto mr-60'}>
+            <NavBar menu={menu} setMenu={setMenu} setIsSetting={setIsSetting}/>
+            <div className={'w-2/4 max-h-screen overflow-auto'}>
                 {(() => {
                     switch (menu) {
                         case 1 :
-                            // return <Automaton device={device}/>
-                        case 2 :
-                            return <Variables />
+                            return <Automaton />
                         case 3:
-                            return <LineChart device={device}/>
+                            return <LineChart />
                     }
                 })()}
             </div>
+            {isSetting ? (
+                <SettingsBar setIsSetting={setIsSetting}/>
+            ) : <div></div>}
+
         </div>
+
     );
 }
 
