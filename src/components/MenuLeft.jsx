@@ -52,6 +52,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
         const fetchDataAndUpdateState = async () => {
             setLoading(true)
             const result = await FetchData(data.link);
+            setLoading(false)
 
             console.log(result)
             setDataFetch(result);
@@ -61,12 +62,6 @@ const MenuLeft = ({menu, setIsSetting}) => {
         fetchDataAndUpdateState();
     }, [menu, data.link]);
 
-
-    useEffect(() => {
-        if (dataFetch) {
-            setLoading(false)
-        }
-    }, [menu, dataFetch]);
 
     // return loading ? (
     //     // <p>Chargement</p>
