@@ -3,7 +3,7 @@ import FetchData from "../api/FetchData";
 import login from "./Login";
 
 
-const MenuLeft = ({menu, setIsSetting}) => {
+const MenuLeft = ({menu, setIsSetting, setDevice}) => {
 
     let data = []
 
@@ -152,6 +152,9 @@ const MenuLeft = ({menu, setIsSetting}) => {
                             </button>)}
 
                         {Object.keys(dataFetch.data).map((item, index) => (<button
+                                    onClick={()=>{
+                                        setDevice({item})
+                                    }}
                                     key={index}
                                     className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
                                 >
