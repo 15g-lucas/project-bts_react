@@ -151,9 +151,9 @@ const MenuLeft = ({menu, setIsSetting, setDevice}) => {
                                 Créer {data.search}
                             </button>)}
 
-                        {Object.keys(dataFetch.data).map((item, index) => (<button
+                        {dataFetch.data.map((item, index) => (<button
                                     onClick={()=>{
-                                        setDevice(item)
+                                        setDevice(item.automaton)
                                     }}
                                     key={index}
                                     className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
@@ -161,7 +161,7 @@ const MenuLeft = ({menu, setIsSetting, setDevice}) => {
                                     <h1
                                         className="text-sm font-medium capitalize text-slate-700 dark:text-slate-200"
                                     >
-                                        {item}
+                                        {item.automaton}
                                     </h1>
                                     <p className="text-xs text-slate-500 dark:text-slate-400">{item.description ? item.description : 'Inconnue'}</p>
                                 </button>))
