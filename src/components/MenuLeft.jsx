@@ -59,7 +59,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
             // result ? Object.keys(result.data).forEach((el)=>{
             //     console.log(el)
             // }) : console.log('login')
-            setLoading(false)
+            // setLoading(false)
         };
 
         fetchDataAndUpdateState();
