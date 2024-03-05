@@ -75,7 +75,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
     )
 
 
-     return  (<div
+    (<div
             className="h-screen w-52 overflow-y-auto bg-slate-50 py-8 dark:bg-slate-900 sm:w-60"
         >
 
