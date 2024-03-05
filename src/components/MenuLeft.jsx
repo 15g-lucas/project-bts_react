@@ -22,7 +22,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
                     'activeButton': false,
                     'key': 'automations',
                     'link': 'api/v1/description/automaton',
-                    'typeFetch': false,
+                    'typeFetch': true,
                 }
                 break
             case 2 :
@@ -59,11 +59,11 @@ const MenuLeft = ({menu, setIsSetting}) => {
             // result ? Object.keys(result.data).forEach((el)=>{
             //     console.log(el)
             // }) : console.log('login')
-            // setLoading(false)
+            setLoading(false)
         };
 
         fetchDataAndUpdateState();
-    }, []);
+    }, [menu]);
 
 
     return loading ? (
