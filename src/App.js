@@ -20,7 +20,7 @@ function App() {
                 {(() => {
                     switch (menu) {
                         case 1 :
-                            return <Automaton />
+                            // return <Automaton />
                         case 3:
                             return <LineChart />
                     }
