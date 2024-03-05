@@ -67,7 +67,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
 
 
     return loading ? (
-        <p>Loading</p>
+        <p></p>
     ) :
 
     (<div
