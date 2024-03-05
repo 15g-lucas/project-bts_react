@@ -21,7 +21,7 @@ function App() {
                 {(() => {
                     switch (menu) {
                         case 1 :
-                            return <Automaton />
+                            return <Automaton device={device}/>
                         case 3:
                             return <LineChart />
                     }
