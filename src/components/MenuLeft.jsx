@@ -156,7 +156,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
                                 Créer {data.search}
                             </button>)}
 
-                        (Object.keys(dataFetch.data).forEach((item, index) => (<button
+                        {Object.keys(dataFetch.data).map((item, index) => (<button
                                     key={index}
                                     className="flex w-full flex-col gap-y-2 rounded-lg px-3 py-2 text-left transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:hover:bg-slate-800"
                                 >
@@ -166,7 +166,8 @@ const MenuLeft = ({menu, setIsSetting}) => {
                                         {item}
                                     </h1>
                                     <p className="text-xs text-slate-500 dark:text-slate-400">{item.description ? item.description : 'Inconnue'}</p>
-                                </button>)))
+                                </button>))
+                        }
 
 
                     </div>
