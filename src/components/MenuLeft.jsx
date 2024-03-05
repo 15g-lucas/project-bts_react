@@ -56,7 +56,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
             await setDataFetch(result);
 
             console.log(result.data)
-            result ? result.data.forEach((el)=>{
+            result ? Object.keys(result.data).forEach((el)=>{
                 console.log(el)
             }) : console.log('login')
             setLoading(false)
