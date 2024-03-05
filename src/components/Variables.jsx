@@ -99,7 +99,7 @@ const Variables = () => {
                     required
                 />
                 {loading ? (
-                    <div>Chargement</div>
+                    <div></div>
                 ) : (
                     <div className={'bg-blue-200wd'}>
                         {dataSearch.map((item, index) => (
