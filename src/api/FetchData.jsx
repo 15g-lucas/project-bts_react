@@ -9,7 +9,7 @@ const FetchData = async (endpoint, method = 'GET', data = null) => {
     };
 
     const response = await fetch(`http://localhost/${endpoint}`, requestOptions);
-    console.log(response)
+    console.log(response.json())
     // const result = await response.json();
     // return result;
 };
