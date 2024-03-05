@@ -19,7 +19,11 @@ const NavBar = ({menu, setMenu, setIsSetting, setDevice}) =>{
                 {/* New conversation */}
                 <a
                     onClick={() => setMenu(1)}
-                    className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800"
+                    className={`${
+                        menu === 1
+                            ? 'bg-blue-100 cursor-pointer rounded-lg p-1.5 text-blue-600 transition-colors duration-200 dark:bg-slate-800 dark:text-blue-600'
+                            : ''
+                    }`}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -80,8 +84,11 @@ const NavBar = ({menu, setMenu, setIsSetting, setDevice}) =>{
                 {/* Discover */}
                 <a
                     onClick={() => setMenu(3)}
-
-                    className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800"
+                    className={`${
+                        menu === 3
+                            ? 'bg-blue-100 cursor-pointer rounded-lg p-1.5 text-blue-600 transition-colors duration-200 dark:bg-slate-800 dark:text-blue-600'
+                            : ''
+                    }`}
                 >
 
                     <svg
@@ -113,7 +120,11 @@ const NavBar = ({menu, setMenu, setIsSetting, setDevice}) =>{
                 {/* User */}
                 <a
                     onClick={() => setMenu(4)}
-                    className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800"
+                    className={`${
+                        menu === 4
+                            ? 'bg-blue-100 cursor-pointer rounded-lg p-1.5 text-blue-600 transition-colors duration-200 dark:bg-slate-800 dark:text-blue-600'
+                            : ''
+                    }`}
                 >
 
 
