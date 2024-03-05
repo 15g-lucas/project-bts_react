@@ -13,43 +13,43 @@ const MenuLeft = ({menu, setIsSetting}) => {
     const [numberData, setNumberData] = useState(0)
     const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        switch (menu) {
-            case 1 :
-                data = {
-                    'name': 'Automates',
-                    'search': 'un automate',
-                    'activeButton': false,
-                    'key': 'automations',
-                    'link': 'api/v1/description/automaton',
-                    'typeFetch': true,
-                }
-                break
-            case 2 :
-                data = {
-                    'name': 'Variables',
-                    'search': 'une variable',
-                    'activeButton': true,
-                    'link': 'api/v1/variable',
-                    'typeFetch': false,
-                }
-                break
-            case 3 :
-                data = {
-                    'name': 'Graphiques',
-                    'search': 'un graphique',
-                    'activeButton': true,
-                    'link': 'api/v1/graphic',
-                    'typeFetch': true,
-                }
-                break
-            case 4 :
-                data = {
-                    'name': 'Rapports', 'search': 'un rapport', 'activeButton': true, 'link': 'test', 'typeFetch': false,
-                }
-                break
-        }
+    switch (menu) {
+        case 1 :
+            data = {
+                'name': 'Automates',
+                'search': 'un automate',
+                'activeButton': false,
+                'key': 'automations',
+                'link': 'api/v1/description/automaton',
+                'typeFetch': true,
+            }
+            break
+        case 2 :
+            data = {
+                'name': 'Variables',
+                'search': 'une variable',
+                'activeButton': true,
+                'link': 'api/v1/variable',
+                'typeFetch': false,
+            }
+            break
+        case 3 :
+            data = {
+                'name': 'Graphiques',
+                'search': 'un graphique',
+                'activeButton': true,
+                'link': 'api/v1/graphic',
+                'typeFetch': true,
+            }
+            break
+        case 4 :
+            data = {
+                'name': 'Rapports', 'search': 'un rapport', 'activeButton': true, 'link': 'test', 'typeFetch': false,
+            }
+            break
+    }
 
+    useEffect(() => {
         const fetchDataAndUpdateState = async () => {
             setLoading(true)
             const result = await FetchData(data.link);
@@ -67,8 +67,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
 
 
     return loading ? (
-        // <p>Chargement</p>
-        console.log('loading')
+        <p>Loading</p>
     ) :
 
     (<div
