@@ -18,7 +18,6 @@ function App() {
 
         <div className={'flex justify-between'}>
             <NavBar menu={menu} setMenu={setMenu} setIsSetting={setIsSetting} setDevice={setDevice}/>
-            {device}
             <div className={'w-2/4 max-h-screen overflow-auto'}>
                 {(() => {
                     switch (menu) {
