@@ -14,7 +14,7 @@ const NavBar = ({menu, setMenu, setIsSetting, setDevice}) =>{
             >
                 {/* Logo */}
                 <a href="#" className="mb-1">
-                    <img  src={favicon} alt="favicon ar2c" className={'mt-[-10px] mb-[-25px]'}/>
+                    <img src={favicon} alt="favicon ar2c" className={'mt-[-10px] mb-[-25px]'}/>
                 </a>
                 {/* New conversation */}
                 <a
@@ -49,100 +49,101 @@ const NavBar = ({menu, setMenu, setIsSetting, setDevice}) =>{
                 {/* Conversations */}
                 <a
                     onClick={() => setMenu(2)}
-                    {menu===2 ??
-                            className={'bg-blue-100 cursor-pointer rounded-lg p-1.5 text-blue-600 transition-colors duration-200 dark:bg-slate-800 dark:text-blue-600'}
-                    }
-
-
-
+                    className={`${
+                        menu === 2
+                            ? 'bg-blue-100 cursor-pointer rounded-lg p-1.5 text-blue-600 transition-colors duration-200 dark:bg-slate-800 dark:text-blue-600'
+                            : ''
+                    }`}
                 >
-
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M6 16H10M8 18V14M14.5 6.49988L17.5 9.49988M14.5 9.49988L17.5 6.49988M6 7.99997H10M14 15H18M14 18H18"
-                                stroke="#63738a" strokeWidth="2.04" strokeLinecap="round"
-                                strokeLinejoin="round"></path>
-                        </g>
-                    </svg>
-
+                    <!-- Votre contenu ici -->
                 </a>
-                {/* Discover */}
-                <a
-                    onClick={() => setMenu(3)}
 
-                    className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800"
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M6 16H10M8 18V14M14.5 6.49988L17.5 9.49988M14.5 9.49988L17.5 6.49988M6 7.99997H10M14 15H18M14 18H18"
+                            stroke="#63738a" strokeWidth="2.04" strokeLinecap="round"
+                            strokeLinejoin="round"></path>
+                    </g>
+                </svg>
 
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                                  stroke="#63738a" strokeWidth="1.9200000000000004" strokeLinecap="round"
-                                  strokeLinejoin="round"></path>
-                            <path opacity="0.44"
-                                  d="M7.33008 14.4898L9.71008 11.3998C10.0501 10.9598 10.6801 10.8798 11.1201 11.2198L12.9501 12.6598C13.3901 12.9998 14.0201 12.9198 14.3601 12.4898L16.6701 9.50977"
-                                  stroke="#63738a" strokeWidth="1.9200000000000004" strokeLinecap="round"
-                                  strokeLinejoin="round"></path>
-                        </g>
-                    </svg>
+            </a>
+            {/* Discover */}
+            <a
+                onClick={() => setMenu(3)}
 
+                className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800"
+            >
 
-
-                </a>
-                {/* User */}
-                <a
-                    onClick={() => setMenu(4)}
-                    className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800"
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                              stroke="#63738a" strokeWidth="1.9200000000000004" strokeLinecap="round"
+                              strokeLinejoin="round"></path>
+                        <path opacity="0.44"
+                              d="M7.33008 14.4898L9.71008 11.3998C10.0501 10.9598 10.6801 10.8798 11.1201 11.2198L12.9501 12.6598C13.3901 12.9998 14.0201 12.9198 14.3601 12.4898L16.6701 9.50977"
+                              stroke="#63738a" strokeWidth="1.9200000000000004" strokeLinecap="round"
+                              strokeLinejoin="round"></path>
+                    </g>
+                </svg>
 
 
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M20 12.5V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.11984 22 8.8 22H12M14 11H8M10 15H8M16 7H8M14.5 19L16.5 21L21 16.5"
-                                stroke="#63738a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                        </g>
-                    </svg>
+            </a>
+            {/* User */}
+            <a
+                onClick={() => setMenu(4)}
+                className="cursor-pointer rounded-lg p-1.5 text-slate-500 transition-colors duration-200 hover:bg-slate-200 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800"
+            >
 
-                </a>
-            </div>
-            {/* Second Column */}
-            <MenuLeft menu={menu} setIsSetting={setIsSetting} setDevice={setDevice}/>
-        </aside>
-    )
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M20 12.5V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.11984 22 8.8 22H12M14 11H8M10 15H8M16 7H8M14.5 19L16.5 21L21 16.5"
+                            stroke="#63738a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </g>
+                </svg>
+
+            </a>
+        </div>
+    {/* Second Column */
+    }
+    <MenuLeft menu={menu} setIsSetting={setIsSetting} setDevice={setDevice}/>
+</aside>
+)
 }
 
 export default NavBar
