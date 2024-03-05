@@ -58,7 +58,7 @@ const MenuLeft = ({menu, setIsSetting}) => {
         };
 
         fetchDataAndUpdateState();
-    }, [menu]);
+    }, []);
 
 
     // return loading ? (
