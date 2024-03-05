@@ -9,6 +9,7 @@ import Automaton from "./components/Automaton";
 function App() {
     const [menu, setMenu] = useState(1)
     const [isSetting, setIsSetting] = useState(true)
+    const [device, setDevice] = useState('dev80')
 
     return (
         //<Login />

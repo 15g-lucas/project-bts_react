@@ -4,7 +4,7 @@ import FetchData from "../api/FetchData";
 const Automaton = ({device}) => {
     const [dataFetch, setDataFetch] = useState([])
     const [loading, setLoading] = useState(true)
-    const [prevDevice, setPrevDevice] = useState('dev80');
+    const [prevDevice, setPrevDevice] = useState(null);
 
     useEffect(() => {
         const fetchDataAutomaton = async () => {
